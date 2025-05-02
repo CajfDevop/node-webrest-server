@@ -27,6 +27,7 @@ export class TodosController {
   };
 
   public createTodo = async (req: Request, res: Response) => {
+    
     const [error, createTodoDto] = CreateTodoDto.create(req.body);
     if (error) {
       res.status(400).json({ error });
